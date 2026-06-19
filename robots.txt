@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ashkyz.github.io/indexsite-leyu-com-cn/sitemap.xml

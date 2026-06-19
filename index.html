@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>稳定入口｜乐鱼体育 · 介绍页</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f7f4ee;
+      color: #2c2b28;
+      font-family: "Georgia", "Noto Serif SC", "Source Han Serif CN", serif;
+      line-height: 1.7;
+      padding: 2rem 1.2rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .page {
+      max-width: 780px;
+      width: 100%;
+      background: #fcfaf5;
+      padding: 2.8rem 2.2rem;
+      border-radius: 20px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0, 0, 0, 0.02);
+    }
+
+    /* 开场短句 — 像书眉 */
+    .opening-line {
+      font-size: 0.9rem;
+      letter-spacing: 1.2px;
+      color: #9e8f7a;
+      text-transform: uppercase;
+      border-bottom: 1px solid #e3dbcf;
+      padding-bottom: 0.6rem;
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      margin-bottom: 0.3rem;
+      color: #2b2a26;
+    }
+
+    .subhead {
+      font-size: 1rem;
+      color: #7e7364;
+      margin-bottom: 2rem;
+      padding-left: 1px;
+      border-left: 3px solid #dac9b6;
+      padding-left: 1rem;
+      font-style: italic;
+    }
+
+    /* 承接：集成段 */
+    .intro-text {
+      font-size: 1.05rem;
+      margin-bottom: 2.2rem;
+      text-align: justify;
+    }
+
+    .intro-text a {
+      color: #3e5a4c;
+      text-decoration: none;
+      border-bottom: 1px solid #b8c9bc;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .intro-text a:hover {
+      color: #1b2f24;
+      border-bottom-color: #1b2f24;
+    }
+
+    /* 特点列表 — 用引用框风格 */
+    .feature-block {
+      background: #f3efe7;
+      padding: 1.6rem 2rem 1.8rem 2rem;
+      border-radius: 14px;
+      margin: 2.2rem 0;
+      box-shadow: inset 0 1px 3px rgba(0,0,0,0.02);
+    }
+
+    .feature-block h2 {
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin-bottom: 1.4rem;
+      letter-spacing: 0.5px;
+      color: #3b3a35;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .feature-block h2::before {
+      content: "▹";
+      color: #917b63;
+      font-size: 1.4rem;
+    }
+
+    .feature-item {
+      display: flex;
+      gap: 0.8rem;
+      margin-bottom: 1.1rem;
+      align-items: baseline;
+    }
+
+    .feature-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .feature-marker {
+      font-family: "Courier New", monospace;
+      color: #917b63;
+      font-weight: 400;
+      min-width: 1.8rem;
+      font-size: 1rem;
+    }
+
+    .feature-desc {
+      flex: 1;
+    }
+
+    .feature-desc strong {
+      font-weight: 500;
+      color: #2b2a26;
+    }
+
+    /* 提示框、引人思考 */
+    .notebox {
+      background: #eae5db;
+      padding: 1.2rem 1.6rem;
+      border-left: 5px solid #8b7a66;
+      border-radius: 8px;
+      margin: 2rem 0;
+      font-size: 0.98rem;
+      color: #302d28;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+    }
+
+    .notebox p {
+      margin-bottom: 0.3rem;
+    }
+
+    .notebox p:last-child {
+      margin-bottom: 0;
+    }
+
+    .notebox .note-label {
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      color: #5b4d3b;
+    }
+
+    /* 温和结尾 + 引用 */
+    .closing {
+      margin-top: 2.8rem;
+      padding-top: 1.8rem;
+      border-top: 1px solid #e0d7ca;
+      font-size: 1rem;
+      color: #3f3b34;
+      text-align: left;
+    }
+
+    .closing-quote {
+      background: #f3ede4;
+      padding: 1rem 1.6rem;
+      border-radius: 30px 8px 30px 8px;
+      margin: 1.2rem 0 1.8rem;
+      font-style: normal;
+      color: #3a352e;
+      display: inline-block;
+    }
+
+    .closing-quote::before {
+      content: "“";
+      font-size: 1.6rem;
+      color: #917b63;
+      margin-right: 4px;
+    }
+
+    .closing-quote::after {
+      content: "”";
+      font-size: 1.6rem;
+      color: #917b63;
+      margin-left: 4px;
+    }
+
+    .sig {
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      color: #7b7266;
+    }
+
+    /* 响应式细节 */
+    @media (max-width: 550px) {
+      body {
+        padding: 1rem 0.5rem;
+      }
+      .page {
+        padding: 1.8rem 1.2rem;
+      }
+      h1 {
+        font-size: 1.6rem;
+      }
+      .feature-block {
+        padding: 1.2rem 1.2rem;
+      }
+      .notebox {
+        padding: 1rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="opening-line">· 稳 定 入 口 · 页 面 说 明</div>
+
+    <h1>乐鱼体育</h1>
+    <div class="subhead">一个常被提及、但入口需要明确指向的平台</div>
+
+    <div class="intro-text">
+      <p>访问一个平台，第一件事是找到对的地址。很多用户反馈，搜索“<a href="https://indexsite-leyu.com.cn">乐鱼体育</a>”时会出现多条路径，但并非每条都指向同一处。本页面作为一篇说明性质的索引，从稳定入口和页面定位的角度，梳理与乐鱼体育相关的几个关键事实。</p>
+    </div>
+
+    <div class="feature-block">
+      <h2>入口侧 · 核心特征</h2>
+
+      <div class="feature-item">
+        <span class="feature-marker">01</span>
+        <div class="feature-desc">
+          <strong>直连与重定向</strong> —— 平台使用单一主域 <code>indexsite-leyu.com.cn</code> 作为集中入口，避免因多域名造成的混淆。用户将这一地址存入书签，即可在后续访问中绕开临时跳转页。
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <span class="feature-marker">02</span>
+        <div class="feature-desc">
+          <strong>内容分区明确</strong> —— 乐鱼体育的主页结构按“赛事·数据·社区·工具”四大块组织，每个板块的入口都悬挂在导航栏一级位置。无需滚动三屏以上即可抵达任一功能区。
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <span class="feature-marker">03</span>
+        <div class="feature-desc">
+          <strong>设备自适与加载</strong> —— 页面针对移动端与桌面端采用了不同的卡片堆叠逻辑。在低带宽环境下，首屏优先展示核心导航与当日热门条目，图片资源延迟加载以保证基础可用性。
+        </div>
+      </div>
+    </div>
+
+    <!-- 提示框 / 类似FAQ摘要 -->
+    <div class="notebox">
+      <p><span class="note-label">📌 关于入口稳定性：</span> 乐鱼体育未使用多个跳转域名，而是将路径收敛于 <code>indexsite-leyu.com.cn</code>。如果遇到无法访问的情况，建议先检查本地网络与DNS解析，而非盲目搜索第三方镜像站——后者往往伴随安全风险。</p>
+      <p style="margin-top:0.8rem;"><span class="note-label">📌 页面说明：</span> 本介绍页不存储任何用户数据，也不提供登录功能；它仅作为一张“静态路牌”帮助新访客确认正确的域名位置。</p>
+    </div>
+
+    <!-- 一个更安静的引用块，带一点故事感 -->
+    <div style="margin: 1.6rem 0 2rem;">
+      <p style="font-size:0.95rem; color:#4f4a41;">有一次用户问：“我明明输入了乐鱼体育，怎么跳到了一个广告聚合页？”—— 原因很简单：搜索引擎结果里混入了仿冒地址。多花十秒钟核对域名中的每一个字母，省去之后很多麻烦。</p>
+    </div>
+
+    <div class="closing">
+      <div class="closing-quote">
+        把入口收窄，把说明写清楚，本身就是一种可靠。
+      </div>
+      <p>如果你正在寻找<a href="https://indexsite-leyu.com.cn" style="color:#3e5a4c; text-decoration:none; border-bottom:1px solid #b8c9bc;">乐鱼体育</a>，那么上面这个链接就是当前最直接的页面地址。建议首次访问时复制整个域名，亲自确认每一个字符，再收藏至浏览器书签栏。</p>
+      <div class="sig">— 页面索引 / 版本·2025</div>
+    </div>
+  </div>
+</body>
+</html>
