@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>乐彩 · 资料索引</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #fafaf9;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            color: #1e1e1e;
+            line-height: 1.75;
+            padding: 0 1.2rem;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 2.8rem 0 4rem;
+        }
+
+        /* 顶部导航 */
+        nav {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 4rem;
+            border-bottom: 1px solid #e2e2e0;
+            padding-bottom: 0.75rem;
+        }
+
+        .nav-title {
+            font-weight: 500;
+            font-size: 1.1rem;
+            letter-spacing: 0.02em;
+            color: #3b3b3b;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.8rem;
+            font-size: 0.9rem;
+        }
+
+        .nav-links a {
+            color: #5c5c5c;
+            text-decoration: none;
+            transition: color .2s;
+        }
+
+        .nav-links a:hover {
+            color: #b78a3c;
+        }
+
+        /* hero 区域 */
+        .hero {
+            margin-bottom: 3.6rem;
+        }
+
+        .hero h1 {
+            font-weight: 450;
+            font-size: 2.2rem;
+            letter-spacing: -0.01em;
+            margin-bottom: 0.75rem;
+            color: #1f1f1f;
+        }
+
+        .hero p {
+            font-size: 1.05rem;
+            color: #4b4b4b;
+            max-width: 580px;
+        }
+
+        /* 通用章节 */
+        section {
+            margin-bottom: 3.6rem;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #9a8a72;
+            background: #f0ede8;
+            padding: 0.2rem 0.9rem;
+            border-radius: 20px;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-weight: 450;
+            font-size: 1.6rem;
+            margin-bottom: 1.25rem;
+            color: #1f1f1f;
+        }
+
+        /* 三个场景卡片 */
+        .scenes-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .scene-card {
+            background: white;
+            border-radius: 16px;
+            padding: 1.6rem 1.8rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.02);
+            border: 1px solid #efede9;
+        }
+
+        .scene-card h3 {
+            font-weight: 480;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #2b2b2b;
+        }
+
+        .scene-card .tag {
+            display: inline-block;
+            font-size: 0.7rem;
+            background: #eae7e0;
+            padding: 0.1rem 0.7rem;
+            border-radius: 12px;
+            color: #5b4f3e;
+            margin-right: 0.5rem;
+        }
+
+        .scene-card p {
+            margin-top: 0.5rem;
+            color: #4b4b4b;
+            font-size: 0.95rem;
+        }
+
+        /* 说明区域 —— 紧凑 FAQ 风格 */
+        .faq-item {
+            border-bottom: 1px solid #eae8e4;
+            padding: 1rem 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-q {
+            font-weight: 470;
+            font-size: 1rem;
+            color: #222;
+            margin-bottom: 0.25rem;
+        }
+
+        .faq-a {
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        .faq-a a {
+            color: #b78a3c;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-thickness: 1px;
+        }
+
+        .faq-a a:hover {
+            color: #8b6a2f;
+        }
+
+        /* 内联引用 / 强调 */
+        .inline-link-wrap {
+            background: #f4f2ee;
+            padding: 1.2rem 1.6rem;
+            border-radius: 40px;
+            font-size: 0.95rem;
+            color: #3a3a3a;
+            margin: 1.8rem 0 0;
+        }
+
+        .inline-link-wrap a {
+            color: #b78a3c;
+            font-weight: 460;
+            text-decoration: none;
+            border-bottom: 1px solid #dacfb8;
+        }
+
+        .inline-link-wrap a:hover {
+            border-bottom-color: #b78a3c;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e7e4df;
+            margin: 2.8rem 0;
+        }
+
+        /* 响应式 */
+        @media (max-width: 520px) {
+            .container {
+                padding: 1.8rem 0 3rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 0.4rem;
+            }
+
+            .nav-links {
+                gap: 1.2rem;
+                font-size: 0.85rem;
+            }
+
+            .scene-card {
+                padding: 1.2rem 1.2rem;
+            }
+
+            .inline-link-wrap {
+                padding: 1rem 1.2rem;
+                border-radius: 28px;
+            }
+        }
+
+        footer {
+            font-size: 0.75rem;
+            color: #9b9b9b;
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid #efede9;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- 导航 -->
+    <nav>
+        <span class="nav-title">索引·乐彩资料</span>
+        <div class="nav-links">
+            <a href="#intro">介绍</a>
+            <a href="#scenes">场景</a>
+            <a href="#faq">说明</a>
+        </div>
+    </nav>
+
+    <!-- hero -->
+    <div class="hero" id="intro">
+        <h1>整理，是为了更清晰地看见</h1>
+        <p>“乐彩”背后是大量零散的信息碎片——数字、趋势、玩法、规则。我们把这些碎片按索引逻辑重新梳理，方便你快速定位自己需要的部分。</p>
+    </div>
+
+    <!-- 介绍段 -->
+    <section>
+        <span class="section-label">出发点</span>
+        <p style="margin-bottom: 1.2rem;">
+            很多人初次接触某一类彩种时，常被繁多的名词与规则绕晕。实际上，多数资料都存在重复或过时的内容。<a href="https://index-lecai.com">乐彩</a>从资料整理的视角出发，将分散的条目汇总、归类、更新，形成一个相对干净的参考资料集。这里没有诱导性话术，只有经过筛选的基础信息。
+        </p>
+        <p style="color:#555;">
+            无论你是想了解基础分类，还是对比不同彩种的规则差异，索引结构都能帮你省下反复翻找的时间。我们不对任何玩法做推荐，只提供客观条目。
+        </p>
+    </section>
+
+    <!-- 三个场景模块 -->
+    <section id="scenes">
+        <span class="section-label">使用场景</span>
+        <h2>三种常见的信息检索需求</h2>
+        <div class="scenes-grid">
+            <div class="scene-card">
+                <h3>规则速查</h3>
+                <span class="tag">分类</span><span class="tag">术语</span>
+                <p>当你想确认某个玩法的具体开奖方式、奖项设置或兑奖期限，不用四处翻截图。乐彩索引里按照类别整理好了常见规则条目，可以直接定位。</p>
+            </div>
+            <div class="scene-card">
+                <h3>趋势对比</h3>
+                <span class="tag">历史</span><span class="tag">统计</span>
+                <p>部分彩种的历史开奖号码、和值、奇偶等基础数据被汇总成简洁表格。适合那些希望自行观察、不做预设判断的资料查阅者。</p>
+            </div>
+            <div class="scene-card">
+                <h3>名词澄清</h3>
+                <span class="tag">解释</span><span class="tag">易混</span>
+                <p>“跨度”“AC值”“热号冷号”——这些词汇在不同语境下含义略有差别。页面中单独列出了名词释义模块，并标注了常见误读。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 常见说明 (FAQ 摘要) -->
+    <section id="faq">
+        <span class="section-label">常见说明</span>
+        <h2>你可能想了解的几点</h2>
+        <div class="faq-item">
+            <div class="faq-q">资料多久更新一次？</div>
+            <div class="faq-a">规则部分在有官方调整后会尽量跟进；历史数据通常每月整合一次。时效性标注在每条信息末尾。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">为什么没有“推荐”或“预测”？</div>
+            <div class="faq-a">这个索引的定位是资料整理，不是推荐平台。所有内容都围绕“客观信息陈列”展开，不包含预测或引导性内容。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">我可以在哪里找到完整的分类？</div>
+            <div class="faq-a">从 <a href="https://index-lecai.com">乐彩</a> 首页进入后，左侧导航按类别列出了所有模块。你也可以使用站内搜索直接查找术语。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">内容是否有遗漏或错误？</div>
+            <div class="faq-a">我们尽力核对，但疏漏难免。如果你发现不准确的地方，可以通过页面底部的反馈渠道告知，会及时复核修正。</div>
+        </div>
+    </section>
+
+    <!-- 自然嵌入链接的句子块 -->
+    <div class="inline-link-wrap">
+        📂 如果你正在整理自己的资料库，不妨以 <a href="https://index-lecai.com">乐彩</a> 作为参照结构——它的分类逻辑和条目写法或许能给你一些启发。
+    </div>
+
+    <hr>
+
+    <!-- 极简 footer -->
+    <footer>
+        <span>资料索引 · 保持中立与清晰</span>
+    </footer>
+</div>
+</body>
+</html>
