@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>华体会 · 简明指南</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #fcfcfc;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            color: #1e1e1e;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+        .page {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 3.2rem 1.8rem 5rem;
+        }
+
+        /* hero */
+        .hero {
+            margin-bottom: 3.6rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #eaeaea;
+        }
+        .hero h1 {
+            font-size: 2.6rem;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            color: #111;
+            margin-bottom: 0.4rem;
+        }
+        .hero .sub {
+            font-size: 1rem;
+            color: #6a6a6a;
+            margin-top: 0.25rem;
+        }
+        .hero p {
+            margin-top: 1.2rem;
+            font-size: 1.05rem;
+            color: #2c2c2c;
+        }
+
+        /* section titles */
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin: 2.8rem 0 1rem 0;
+            letter-spacing: -0.02em;
+            color: #111;
+        }
+        h3 {
+            font-size: 1.15rem;
+            font-weight: 500;
+            margin: 1.8rem 0 0.6rem 0;
+            color: #1e1e1e;
+        }
+
+        /* cards / 优势区 */
+        .grid-advantage {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin: 1.2rem 0 1rem;
+        }
+        .advantage-card {
+            background: #ffffff;
+            border: 1px solid #eaeaea;
+            border-radius: 12px;
+            padding: 1.4rem 1.2rem;
+            transition: box-shadow 0.2s;
+        }
+        .advantage-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03), 0 1px 2px rgba(0,0,0,0.04);
+        }
+        .advantage-card .emoji {
+            font-size: 1.6rem;
+            display: block;
+            margin-bottom: 0.4rem;
+        }
+        .advantage-card h4 {
+            font-weight: 500;
+            font-size: 1rem;
+            margin-bottom: 0.3rem;
+            color: #111;
+        }
+        .advantage-card p {
+            font-size: 0.9rem;
+            color: #525252;
+            line-height: 1.5;
+        }
+
+        /* 说明区 / 引用样式 */
+        .note-box {
+            background: #f5f5f5;
+            border-left: 4px solid #a0a0a0;
+            padding: 1.2rem 1.5rem;
+            margin: 1.6rem 0;
+            border-radius: 0 12px 12px 0;
+        }
+        .note-box p {
+            font-size: 0.97rem;
+            color: #333;
+        }
+
+        /* faq 摘要 */
+        .faq-summary {
+            margin: 1.8rem 0 1.2rem;
+        }
+        .faq-item {
+            padding: 0.9rem 0;
+            border-bottom: 1px solid #ececec;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-question {
+            font-weight: 500;
+            color: #1e1e1e;
+            margin-bottom: 0.2rem;
+            font-size: 1rem;
+        }
+        .faq-answer {
+            font-size: 0.92rem;
+            color: #4a4a4a;
+            line-height: 1.6;
+        }
+
+        /* 底部区域 */
+        .footer-links {
+            margin-top: 3.2rem;
+            padding-top: 1.8rem;
+            border-top: 1px solid #eaeaea;
+            font-size: 0.9rem;
+            color: #6a6a6a;
+        }
+        .footer-links a {
+            color: #1e1e1e;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.15s;
+        }
+        .footer-links a:hover {
+            border-bottom-color: #a0a0a0;
+        }
+
+        /* 响应式 */
+        @media (max-width: 520px) {
+            .page {
+                padding: 2rem 1.2rem 3.5rem;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .grid-advantage {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            h2 {
+                font-size: 1.3rem;
+                margin-top: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- HERO 区 -->
+    <div class="hero">
+        <h1>华体会<br>简明访问指南</h1>
+        <div class="sub">日常使用 · 基础认知 · 注意事项</div>
+        <p>对于初次接触 <a href="https://tops-hth.com" style="color:#1e1e1e; text-decoration:underline; text-underline-offset: 3px;">华体会</a> 的用户，了解平台的基本结构、访问方式以及需要留意的细节，可以帮助你更顺畅地使用各项服务。本页整理了几条基础信息与提醒，供你参考。</p>
+    </div>
+
+    <!-- 优势区  -->
+    <h2>为什么许多用户选择华体会</h2>
+    <div class="grid-advantage">
+        <div class="advantage-card">
+            <span class="emoji">⚙️</span>
+            <h4>界面直观</h4>
+            <p>功能入口清晰，常用板块在首页即可快速定位，减少不必要的跳转等待。</p>
+        </div>
+        <div class="advantage-card">
+            <span class="emoji">📱</span>
+            <h4>移动端适配</h4>
+            <p>手机浏览器同样可以保持良好布局，横竖屏切换时内容自动调整，浏览不费力。</p>
+        </div>
+        <div class="advantage-card">
+            <span class="emoji">🔐</span>
+            <h4>基础安全提醒</h4>
+            <p>平台采用常见加密传输协议，建议用户在个人设备上尽量避免使用公共网络进行敏感操作。</p>
+        </div>
+        <div class="advantage-card">
+            <span class="emoji">📚</span>
+            <h4>信息分类明确</h4>
+            <p>体育、娱乐、活动等模块各自独立，用户可根据兴趣快速筛选，不必在冗长列表中翻找。</p>
+        </div>
+    </div>
+
+    <!-- 说明区 -->
+    <h2>实用说明与场景</h2>
+    <p>无论是日常浏览还是需要参与互动，了解以下几点可以帮助你更好地理解 <a href="https://tops-hth.com" style="color:#1e1e1e; text-decoration:underline; text-underline-offset: 3px;">华体会</a> 的使用逻辑。</p>
+
+    <h3>注册与登录的基本路径</h3>
+    <p>进入首页后，通常在右上角可以找到注册或登录按钮。填写基本信息并完成验证后即可拥有个人账户。建议妥善保管登录凭证，避免使用与其他平台相同的密码组合。</p>
+
+    <h3>内容浏览与筛选</h3>
+    <p>平台提供的体育赛事、电子竞技、真人娱乐等板块均设有独立的导航标签。你可以通过顶部分类栏快速切换，或使用搜索功能定位特定赛事或活动。部分内容可能需要登录后查看完整详情。</p>
+
+    <div class="note-box">
+        <p><strong>💡 访问提醒：</strong> 若遇到页面加载缓慢或部分区域显示异常，建议先检查本地网络环境或尝试更换浏览器。部分公共 Wi-Fi 或企业网络可能对特定域名有限制，此时使用移动数据网络往往可以解决。</p>
+    </div>
+
+    <h3>账户管理与安全</h3>
+    <p>在个人中心可以查看账户信息、修改密码以及设置安全验证。建议开启两步验证（如平台支持）以提升账户保护等级。如收到任何可疑链接或信息，请勿直接点击，第一时间通过官方渠道核实。</p>
+
+    <!-- FAQ 摘要 -->
+    <h2>常见问题摘要</h2>
+    <div class="faq-summary">
+        <div class="faq-item">
+            <div class="faq-question">华体会是否支持所有地区的用户访问？</div>
+            <div class="faq-answer">不同地区对在线平台的访问政策存在差异，具体可用范围请以实际连接情况为准。建议在合规的前提下使用。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">忘记密码该如何处理？</div>
+            <div class="faq-answer">在登录页面点击“忘记密码”，按照提示输入注册邮箱或手机号，系统会发送重置指引。请确保账户绑定的联系方式仍有效。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">如何联系华体会的客服？</div>
+            <div class="faq-answer">通常平台页面底部会提供在线客服入口或联系方式，建议在工作时间内进行咨询以获得较快的响应。</div>
+        </div>
+    </div>
+
+    <!-- 底部链接 -->
+    <div class="footer-links">
+        <p>本指南仅为使用信息整理。如需直接访问，可以前往 <a href="https://tops-hth.com">华体会</a> 查看最新内容。各功能模块的具体规则以平台实际页面为准。</p>
+        <p style="margin-top: 1.2rem; font-size: 0.8rem; color: #9a9a9a;">© 华体会 · 简明指南 —— 内容保持客观，仅供了解参考。</p>
+    </div>
+</div>
+</body>
+</html>
